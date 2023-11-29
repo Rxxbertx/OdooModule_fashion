@@ -1,0 +1,86 @@
+<odoo>
+  <data>
+    
+
+    <record model="ir.ui.view" id="view_fashion_brand_form">
+      <field name="name">view.fashion.brand.form</field>
+      <field name="model">fashion.brand</field>
+      <field name="arch" type="xml">
+        <form string="Marca">
+        
+          <sheet>
+            <group name="group_left">
+            <field name="name"/>
+            </group>
+            <group name="group_right">
+            <field name="description"/>
+            </group>
+          </sheet>
+        
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_fashion_subrand_form">
+      <field name="name">view.fashion.subrand.form</field>
+      <field name="model">fashion.subrand</field>
+      <field name="arch" type="xml">
+        <form string="SubMarca">
+        
+          <sheet>
+            <group name="group_left">
+            <field name="name"/>
+            </group>
+            <group name="group_right">
+            <field name="brand"/>
+            </group>
+          </sheet>
+        
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="fashion.action_window">
+      <field name="name">fashion window</field>
+      <field name="res_model">fashion.fashion</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="fashion.action_server">
+      <field name="name">fashion server</field>
+      <field name="model_id" ref="model_fashion_fashion"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="fashion" id="fashion.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="fashion.menu_1" parent="fashion.menu_root"/>
+    <menuitem name="Menu 2" id="fashion.menu_2" parent="fashion.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="fashion.menu_1_list" parent="fashion.menu_1"
+              action="fashion.action_window"/>
+    <menuitem name="Server to list" id="fashion" parent="fashion.menu_2"
+              action="fashion.action_server"/>
+-->
+  </data>
+</odoo>
