@@ -16,7 +16,6 @@
             <field name="description"/>
             </group>
           </sheet>
-        
         </form>
       </field>
     </record>

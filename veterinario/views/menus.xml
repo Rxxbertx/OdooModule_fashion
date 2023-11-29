@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+
+    <menuitem id="menu_veterinario_root"
+    name="VETERINARIO"
+    sequence="10"/>
+
+    <menuitem id="menu_pet_root"
+    name="MASCOTAS"
+    parent="menu_veterinario_root"
+    sequence="1"/>
+
+     <menuitem id="menu_medicalconsult_root"
+    name="CONSULTAS"
+    parent="menu_veterinario_root"
+    sequence="1"/>
+
+    <menuitem id="menu_pet_template"
+    name="MASCOTA"
+    parent="menu_pet_root"
+    sequence="1"
+    action="pet_action_window"/>
+
+    <menuitem id="menu_owner_template"
+    name="DUEÑO"
+    parent="menu_pet_root"
+    sequence="1"
+    action="owner_action_window"/>
+
+    <menuitem id="menu_specie_root"
+    name="ESPECIE"
+    parent="menu_veterinario_root"
+    sequence="2"/>
+
+    <menuitem id="menu_specie_template"
+    name="ESPECIE"
+    parent="menu_specie_root"
+    sequence="1"
+    action="specie_action_window"/>
+
+    <menuitem id="menu_race_template"
+    name="RAZA"
+    parent="menu_specie_root"
+    sequence="2"
+    action="race_action_window"/>
+
+    <menuitem id="menu_consult_template"
+    name="CONSULTA"
+    parent="menu_medicalconsult_root"
+    sequence="2"
+    action="consult_action_window"/>
+
+      <menuitem id="menu_medication_template"
+    name="MEDICACION"
+    parent="menu_medicalconsult_root"
+    sequence="2"
+    action="medication_action_window"/>
+    
+  </data>
+</odoo>

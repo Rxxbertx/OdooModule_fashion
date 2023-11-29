@@ -1,0 +1,49 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="view_specie_tree">
+      <field name="name">view.specie.tree</field>
+      <field name="model">specie.template</field>
+      <field name="arch" type="xml">
+        <tree string="specieTree">
+          <field name="name"/>
+    
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_specie_form">
+      <field name="name">view.specie.form</field>
+      <field name="model">specie.template</field>
+      <field name="arch" type="xml">
+        <form string="specieForm">
+          <sheet>
+            <group name="group_top">
+              <group name="group_left">
+                <field name="name"/>
+                
+              </group>
+              <group name="group_right">
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="specie_action_window">
+      <field name="name">specie</field>
+      <field name="res_model">specie.template</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          specie
+        </p>
+        <p>
+          Click 'Crear' para añadir nuevos elementos.
+        </p>
+      </field>
+    </record>
+
+  </data>
+</odoo>

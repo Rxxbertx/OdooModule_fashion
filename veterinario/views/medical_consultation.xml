@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="view_consult_tree">
+      <field name="name">view.consult.tree</field>
+      <field name="model">consult.template</field>
+      <field name="arch" type="xml">
+        <tree string="consultTree">
+            <field name="owner"/>
+            <field name="pet"/>
+            <field name="medication"/>
+            <field name="total_price"/>
+            <field name="datetime" widget="datetime"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_consult_form">
+      <field name="name">view.consult.form</field>
+      <field name="model">consult.template</field>
+      <field name="arch" type="xml">
+        <form string="consultForm">
+          <sheet>
+            <group name="group_top">
+              <group name="group_left">
+                <field name="owner"/>
+                <field name="pet"/>
+                <field name="pet_sex" invisible="1"/>
+                <field name="pet_specie" invisible="1"/>
+                <field name="medication" domain="[('sex', '=', pet_sex), ('specie.name', '=', pet_specie)]"/>
+                
+                <field name="total_price"/>
+                <field name="datetime" widget="datetime"/>
+                
+              </group>
+              <group name="group_right">
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="consult_action_window">
+      <field name="name">consult</field>
+      <field name="res_model">consult.template</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          consult
+        </p>
+        <p>
+          Click 'Crear' para añadir nuevos elementos.
+        </p>
+      </field>
+    </record>
+
+  </data>
+</odoo>
