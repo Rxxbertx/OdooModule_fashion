@@ -11,6 +11,6 @@ class Marca(models.Model):
     _name = 'taller.marca'
     _description = 'Creacion de marcas'
 
-    name = fields.Char('Nombre',required=True)
-    image = fields.Image()
-    description = fields.Text()
+    name = fields.Char(srting = "Nombre",required=True)
+    image = fields.Image(string='Imagen',widget="image")
+    description = fields.Text(string = "Descripcion")

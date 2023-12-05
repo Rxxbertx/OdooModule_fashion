@@ -3,7 +3,7 @@ from encodings import utf_8
 
 coding: utf_8
 
-from odoo import fields,models,api
+from odoo import models, fields, api
  
 class Owner(models.Model):
      _name = 'taller.owner'
