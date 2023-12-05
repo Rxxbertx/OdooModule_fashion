@@ -28,7 +28,7 @@
         'views/menus.xml',
     ],
     'application': True,
-    'images': ['static/description/logo.png'],
+    'images': ['static/description/logo.png',],
     
     # only loaded in demonstration mode
     'demo': [
